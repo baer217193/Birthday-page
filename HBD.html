@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Ucapan Ulang Tahun</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      margin-top: 50px;
+    }
+    h1 {
+      color: #d63384;
+    }
+    p {
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Selamat Ulang Tahun, Sayang!</h1>
+  <p>Semoga hari ini penuh kebahagiaan dan cinta. Aku mencintaimu lebih dari yang bisa diungkapkan kata-kata.</p>
+  
+  <!-- Elemen audio dengan autoplay -->
+  <audio id="birthdayAudio" autoplay>
+    <!-- Pastikan file audio "audio.mp3" ada di direktori yang sama -->
+    <source src="audio.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung pemutaran audio.
+  </audio>
+  
+  <script>
+    // Fallback untuk browser yang memblokir autoplay
+    document.addEventListener('DOMContentLoaded', function() {
+      var audio = document.getElementById('birthdayAudio');
+      if (audio) {
+        audio.play().catch(function(error) {
+          console.log('Autoplay tidak berhasil:', error);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
